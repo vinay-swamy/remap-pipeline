@@ -1,7 +1,7 @@
 rule trim_galore:
 	input:
 			forward = lambda wildcards : expand( os.path.join( PREPROCESSING_DIR, "raw_fastq", "{fastq_name_forward}.fastq.gz"), fastq_name_forward = dict_replicat_trim_filename[ wildcards.replicat_name][ 'fastq_filename_forward']),
-			reverse = lambda wildcards : expand( os.path.join( PREPROCESSING_DIR, "raw_fastq", "{fastq_name_reverse}.fastq.gz"), fastq_name_reverse = dict_replicat_trim_filename[ wildcards.replicat_name][ 'fastq_filename_reverse'])
+			rev = lambda wildcards : expand( os.path.join( PREPROCESSING_DIR, "raw_fastq", "{fastq_name_rev}.fastq.gz"), fastq_name_rev = dict_replicat_trim_filename[ wildcards.replicat_name][ 'fastq_filename_rev'])
 	output:
 			temp( os.path.join( PREPROCESSING_DIR, "trim_fastq", "{replicat_name}", "{trim_filename}.fq.gz"))
 	singularity:
