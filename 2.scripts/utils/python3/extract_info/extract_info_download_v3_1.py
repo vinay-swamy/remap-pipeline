@@ -267,18 +267,18 @@ if __name__ == "__main__":
 	col_ID_serie = 0
 	col_TF = 1
 	col_cell = 2
-	col_SRP = 5
+	col_SRP = 6
 	col_GSM_chip = 3
 	col_GSM_control = 4
 
 
 	# setting rest info
-	url_experiment_srt = "https://www.ebi.ac.uk/ena/data/warehouse/filereport?accession="
+	url_experiment_srt = "https://www.ebi.ac.uk/ena/portal/api/filereport?accession="
 
 
-		# info to get
+                # info to get
 	url_experiment_temp_end_1 = "&result=read_run&fields="
-	url_experiment_temp_end_2 = "&download=1"
+	url_experiment_temp_end_2 = ""
 
 
 	list_info_ena = [
