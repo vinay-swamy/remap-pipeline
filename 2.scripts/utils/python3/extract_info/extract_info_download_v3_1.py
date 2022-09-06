@@ -270,7 +270,7 @@ if __name__ == "__main__":
 	col_SRP = 6
 	col_GSM_chip = 3
 	col_GSM_control = 4
-
+	
 
 	# setting rest info
 	url_experiment_srt = "https://www.ebi.ac.uk/ena/portal/api/filereport?accession="
@@ -381,6 +381,7 @@ if __name__ == "__main__":
 			if check_SRP_format( SRP):
 				pass
 			else:
+				print(SRP)
 				SRP = "wrong_SRP_format"
 				current_error = "line" + str( nb_line) + ":missing_wrong_SRP_format"
 				line_error.append( current_error)
@@ -453,6 +454,7 @@ if __name__ == "__main__":
 
 
 			# getting info from ena
+			print(url_ena)
 			ena_resp = requests.get( url_ena)
 			# Forcing encoding as utf-8
 			# ena_resp.encode('utf-8')
@@ -462,7 +464,8 @@ if __name__ == "__main__":
 			# ena_resp.encoding='ascii'
 			if ena_resp.status_code != 200:
 			    # This means something went wrong.
-			    raise ApiError('GET /tasks/ {}'.format( ena_resp.status_code))
+				print('GET /tasks/ {}'.format( ena_resp.status_code))
+				raise NotImplemented
 
 			# formating info
 			list_line_ena_resp = ena_resp.text.split( '\n')

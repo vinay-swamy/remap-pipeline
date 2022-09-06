@@ -127,7 +127,7 @@ for objects_indir in list_objects_indir: # loop through all the files and folder
                     dict_replicat_trim_filename[ current_filename][ 'trim_basename'] = [ current_filename, "ok"]
                     dict_replicat_trim_filename[ current_filename][ 'fastq_filename'] = [ current_filename]
                     dict_replicat_trim_filename[ current_filename][ 'fastq_filename_forward'] = [ current_filename]
-                    dict_replicat_trim_filename[ current_filename][ 'fastq_filename_reverse'] = []
+                    dict_replicat_trim_filename[ current_filename][ 'fastq_filename_rev'] = []
 
                     dict_fastq_info[ current_filename] = {}
                     dict_fastq_info[ current_filename][ 'fastq_filename'] = [ current_filename]
@@ -189,7 +189,7 @@ for objects_indir in list_objects_indir: # loop through all the files and folder
                     dict_replicat_trim_filename[ current_filename][ 'trim_basename'] = [ forward_filename, reverse_filename]
                     dict_replicat_trim_filename[ current_filename][ 'fastq_filename'] = [ forward_filename, reverse_filename]
                     dict_replicat_trim_filename[ current_filename][ 'fastq_filename_forward'] = [ forward_filename]
-                    dict_replicat_trim_filename[ current_filename][ 'fastq_filename_reverse'] = [ reverse_filename]
+                    dict_replicat_trim_filename[ current_filename][ 'fastq_filename_rev'] = [ reverse_filename]
 
 
                 else:
